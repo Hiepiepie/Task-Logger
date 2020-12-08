@@ -1,0 +1,12 @@
+entity: Label
+items:
+  label 1:
+    name: 'Interesting'
+    task: [ {
+      name: 'task 1'
+    } ]
+  label 2:
+    name: 'Test'
+    task: [ {
+      name: 'This task is boring'
+    } ]

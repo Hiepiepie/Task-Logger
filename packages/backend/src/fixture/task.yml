@@ -1,0 +1,16 @@
+entity: Task
+items:
+  task 1:
+    name: 'Doing some interesting stuff'
+    labels: [ {
+      name: 'Interesting'
+    },{
+      name: 'Stuff'
+    } ]
+    description: 'this is a description for task 1'
+    trackings : [{description: 'init'},{description: 'Oh yes !'}]
+  task 2:
+    name: 'This task is boring'
+    labels: [{name: 'Boring'}]
+    trackings : [{description: 'cancel this one please'},{description: 'Oh no !'}]
+    description: 'Boring description'
