@@ -1,33 +1,29 @@
 # Task Logger App
-Task Logger - Backend
-# Issue:
-The current version is working on MacOs and windows 10. But there is probably to be a Problem with database connection's right in Unbuntu.
-Other Version of Linux wasn't tested yet.
+Task Logger -dev
+# Tech Stack
+- Typescript
+- NodeJs
+- Express Js
+- ReactJs
+- Material-Ui
+- nginx
+
 # Setup backend - Installation
 0- Locate into the current file path of docker-compose.yml in your shell.
-1- Login to Gitlab registry using your gitlab's username and password 
-- `docker login registry.code.fbi.h-da.de`
 
-2- Pull the containers:
-- `docker-compose pull`
-
-3- Create environment file
-
-- `cp ./packages/backend/.env.example ./packages/backend/.env`
-
-4- Start containers
+1- Start containers
 
 - `docker-compose up` / `docker-compose up -d`
 
-5- Sync database schema
+2- Sync database schema
 
 - `docker-compose exec backend npm run typeorm schema:sync`
 
-6- (Optional) Run test suites (Or to test with Postman collection, check the Postman folder)
+3- (Optional) Run test suites (Or to test with Postman collection, check the Postman folder)
 
 - `docker-compose exec backend npm run test`
 
-7- (Optional) Create Fixtures
+4- (Optional) Create Fixtures
 
 - `docker-compose exec backend npm run fixtures`
 # Brief describe the assignment's solution
@@ -137,4 +133,7 @@ Edit a Tracking :
 - Endpoint :`PATCH: /api/tracking/:trackingId`  
 - Request Structure : `{"description":"edited Description",
                         endTime : Timestamp}` 
-           
+# Issue:
+The current version is working on MacOs and windows 10. But there is probably to be a Problem with database connection's right in Unbuntu.
+Other Version of Linux wasn't tested yet.
+                          

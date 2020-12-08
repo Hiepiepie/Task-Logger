@@ -17,12 +17,28 @@ services:
       - backend
 
   backend:
-    image: registry.code.fbi.h-da.de/istlehieu/fwe-ws20-21-753953-ha1
+    container_name: backend
+    build:
+      context: .
+      dockerfile: ./packages/backend/Dockerfile
     ports:
       - 8081:8081
       - 9229:9229
     expose:
       - "8081"
+    networks:
+      - backend
+
+  frontend:
+    container_name: frontend
+    build:
+      context: .
+      dockerfile: ./packages/frontend/Dockerfile
+    ports:
+      - 80:3000
+    expose:
+      - "80"
+    stdin_open: true
     networks:
       - backend
 
